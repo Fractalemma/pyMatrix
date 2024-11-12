@@ -1,0 +1,26 @@
+class Matrix:
+    def __init__(self):
+        self.matrix = []
+
+    def read(self):
+        self.r = int(input("Please enter the number of rows of the matrix: "))
+        self.c = int(input("Please enter the number of columns of the matrix: "))
+
+        self.matrix = []
+        for i in range(self.r):
+            self.matrix.append(list([0] * self.c))
+
+        for i in range(self.r):
+            for j in range(self.c):
+                print(f"M[{i},{j}] = ", end="")
+                self.matrix[i][j] = int(input())
+
+    def print(self):
+        print(f"The given matrix is:")
+        for i in range(self.r):
+            for j in range(self.c):
+                print(f"{self.matrix[i][j]}\t", end="")
+            print()
+
+    def mul(self):
+        pass
