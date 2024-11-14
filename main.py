@@ -8,15 +8,22 @@ def main():
     A.read()
     A.print()
 
-    if c1 == r2:
-        C = []
-        for i in range(r1):
-            C.append(list([0] * c2))
+    print("\n\n------------------------------ MATRIX B:")
+    B = Matrix()
+    B.read()
+    B.print()
 
-        for i in range(r1):
-            for j in range(c2):
-                for k in range(c1):
-                    C[i][j] += A[i][k] * B[k][j]
+    
+
+    if A.c == B.r:
+        C = Matrix()
+        for i in range(A.r):
+            C.matrix.append(list([0] * B.c))
+
+        for i in range(A.r):
+            for j in range(B.c):
+                for k in range(A.c):
+                    C.matrix[i][j] += A.matrix[i][k] * B.matrix[k][j]
 
         """for i in range(r1):
             for j in range(c2):
@@ -24,14 +31,14 @@ def main():
 
         print("-------------------------------------------------")
         print(f"The resultant matrix is:")
-        for i in range(r1):
-            for j in range(c2):
+        for i in range(A.r):
+            for j in range(B.c):
                 print(f"{C[i][j]}\t", end="")
             print()
 
     else:
         print("The given matrices cannot be multiplied!")
-        print(f"Matrix A has {c1} columns and Matrix B has {r2} rows")
+        print(f"Matrix A has {A.c} columns and Matrix B has {B.r} rows")
 
 
 if __name__ == "__main__":

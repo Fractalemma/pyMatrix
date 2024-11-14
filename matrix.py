@@ -1,6 +1,9 @@
 class Matrix:
+    #r = 0
     def __init__(self):
         self.matrix = []
+        self.r = 0
+        self.c = 0
 
     def read(self):
         self.r = int(input("Please enter the number of rows of the matrix: "))
