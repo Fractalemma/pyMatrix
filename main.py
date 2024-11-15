@@ -33,7 +33,7 @@ def main():
         print(f"The resultant matrix is:")
         for i in range(A.r):
             for j in range(B.c):
-                print(f"{C[i][j]}\t", end="")
+                print(f"{C.matrix[i][j]}\t", end="")
             print()
 
     else:
