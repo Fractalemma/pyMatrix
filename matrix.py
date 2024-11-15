@@ -1,5 +1,7 @@
 class Matrix:
     #r = 0
+    #Luis es GEI
+    #Leo es Gei
     def __init__(self):
         self.matrix = []
         self.r = 0
