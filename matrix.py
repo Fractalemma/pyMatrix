@@ -25,8 +25,21 @@ class Matrix:
                 print(f"{self.matrix[i][j]}\t", end="")
             print()
 
-    def mul(self):
-        pass
+    def mul(self, B):
+        if self.c == B.r:
+            C = Matrix()
+            C.r = self.r
+            C.c = B.c
+            for i in range(self.r):
+                C.matrix.append(list([0] * B.c))
+
+            for i in range(self.r):
+                for j in range(B.c):
+                    for k in range(self.c):
+                        C.matrix[i][j] += self.matrix[i][k] * B.matrix[k][j]
+            return C
+        else:
+            raise Exception("Illegal operation: incompatible dimensions")
 
     def scalar(self,k):
         R = Matrix()
