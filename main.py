@@ -14,8 +14,14 @@ def main():
     B.read()
     B.print()
 
+    print("The result of mutiplying A and B is:")
+    C = Matrix()
     C = A.mul(B)
     C.print()
+
+    print("5.55 times the A matrix equals:")
+    S = A.scalar(5.55)
+    S.print()
 
 
 if __name__ == "__main__":
